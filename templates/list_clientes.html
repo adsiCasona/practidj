@@ -1,0 +1,9 @@
+{% extends 'main.html' %}
+{% block content %}
+            <h3>Listado Clientes</h3>
+        <ol>
+        {% for cli in listado %}
+            <li>{{ cli }}</li>
+        {% endfor %}
+        </ol>
+{% endblock content %} 

@@ -1,8 +1,6 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
-
-def index(request):
-    return HttpResponse("<h1>Hola, me encuentro en la aplicación Home</h1>")
-
-def home(request):
-    return HttpResponse("<h2>Hola, esta es un segunda función de Home</h2>")
+def inicio(request):
+    client=['Cliente_uno','Cliente_dos','Cliente_tres','Cliente_cuatro']
+    context={'listado':client}
+    return render(request, 'home.html', context)

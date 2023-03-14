@@ -1,0 +1,9 @@
+{% extends 'main.html' %}
+{% block content %}
+            <h3>Productos</h3>
+        <ol>
+        {% for prod in listado %}
+            <li>{{ prod }}</li>
+        {% endfor %}
+        </ol>
+{% endblock content %} 
