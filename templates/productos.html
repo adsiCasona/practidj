@@ -1,0 +1,29 @@
+{% extends 'main.html' %}
+{% block content %}
+            <h3>Productos</h3>
+        <ol>
+        {% for prod in listado %}
+            <li>{{ prod }}</li>
+        {% endfor %}
+        </ol>
+        <hr>
+        <h3>Tabla #1</h3>
+        <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">nombre</th>
+              </tr>
+            </thead>
+            {% for prod in listado  %}
+            <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>{{ prod }}</td>
+                </tr>
+              </tbody>
+            
+            {% endfor %}
+
+          </table>
+{% endblock content %} 
